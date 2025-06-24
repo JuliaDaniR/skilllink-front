@@ -19,7 +19,7 @@ export default function Login() {
         fullName: response.fullName,
         role: response.role
       }));
-
+      console.log("Usuario logueado:", response.fullName);
       navigate("/home");
     } catch (err) {
       console.error(err);
