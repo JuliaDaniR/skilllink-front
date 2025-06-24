@@ -1,10 +1,8 @@
 import { defineConfig } from 'vite'
-
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  build: {
-    rollupOptions: {
-      external: ['@rollup/rollup-linux-x64-gnu'],
-    },
-  },
-});
+  plugins: [react({
+    jsxRuntime: 'automatic'  // esto hace que no sea necesario importar React en cada archivo JSX
+  })],
+})
